@@ -4,14 +4,22 @@
     {
         static void Main(string[] args)
         {
-            string message = "Find what is (inside the parentheses)";
+            //string message = "Find what is (inside the parentheses)";
 
-            int openingPosition = message.IndexOf('(');
-            int closingPosition = message.IndexOf(')');
+            //int openingPosition = message.IndexOf('(');
+            //int closingPosition = message.IndexOf(')');
+            //openingPosition += 1;
+            //// Console.WriteLine(openingPosition);
+            //// Console.WriteLine(closingPosition);
+
+            //int length = closingPosition - openingPosition;
+            //Console.WriteLine(message.Substring(openingPosition, length));
+
+            string message = "(What if) I am (only interested) in the last (set of parentheses)?";
+            int openingPosition = message.LastIndexOf('(');
+           
             openingPosition += 1;
-            // Console.WriteLine(openingPosition);
-            // Console.WriteLine(closingPosition);
-
+            int closingPosition = message.LastIndexOf(')');
             int length = closingPosition - openingPosition;
             Console.WriteLine(message.Substring(openingPosition, length));
         }
